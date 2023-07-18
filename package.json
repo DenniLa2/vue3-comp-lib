@@ -1,8 +1,19 @@
 {
-  "name": "vue3-comp-lib",
+  "name": "my-comp-lib",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-comp-lib.umd.cjs",
+  "module": "./dist/my-comp-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-comp-lib.js",
+      "require": "./dist/my-comp-lib.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
